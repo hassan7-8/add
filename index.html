@@ -3,155 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Insights | Premium Content Hub</title>
+    <title>Elite Insights | Expert Knowledge Hub</title>
+    
+    <!-- Google AdSense Integration -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8621118119905256" crossorigin="anonymous"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
-        .ad-placeholder { background: #f3f4f6; border: 2px dashed #d1d5db; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-size: 0.875rem; border-radius: 8px; }
+        .ad-container { 
+            background: #f9fafb; 
+            border: 1px solid #e5e7eb; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: #9ca3af; 
+            font-size: 0.75rem; 
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .prose p { margin-bottom: 1.25rem; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed">
 
-    <!-- NAVIGATION BAR: Essential for "Clear Navigation" requirement -->
+    <!-- TOP NAVIGATION -->
     <nav class="bg-white border-b sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center">
-                    <span class="text-2xl font-bold text-blue-600 tracking-tight">ELITE INSIGHTS</span>
+                    <span class="text-2xl font-black text-blue-700 tracking-tighter cursor-pointer" onclick="showPage('home')">ELITE INSIGHTS</span>
                 </div>
-                <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="#" onclick="showPage('home')" class="hover:text-blue-600 transition">Home</a>
-                    <a href="#" onclick="showPage('about')" class="hover:text-blue-600 transition">About Us</a>
-                    <a href="#" onclick="showPage('contact')" class="hover:text-blue-600 transition">Contact</a>
-                    <a href="#" onclick="showPage('privacy')" class="hover:text-blue-600 transition">Privacy Policy</a>
+                <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-600">
+                    <a href="#" onclick="showPage('home')" class="hover:text-blue-700 transition">Home</a>
+                    <a href="#" onclick="showPage('about')" class="hover:text-blue-700 transition">About</a>
+                    <a href="#" onclick="showPage('contact')" class="hover:text-blue-700 transition">Contact</a>
+                    <a href="#" onclick="showPage('privacy')" class="hover:text-blue-700 transition">Privacy Policy</a>
                 </div>
-                <button class="md:hidden p-2 text-gray-500">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                </button>
+                <div class="md:hidden">
+                    <button class="p-2 text-gray-600">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- MAIN CONTENT AREA -->
+    <!-- CONTENT WRAPPER -->
     <main id="content-area" class="max-w-6xl mx-auto px-4 py-8">
-        <!-- HOME PAGE (BLOG FEED) -->
-        <div id="home-page" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div class="lg:col-span-2 space-y-8">
-                <header class="mb-8">
-                    <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Latest In-Depth Articles</h1>
-                    <p class="text-gray-600 text-lg">Exploring technology, finance, and digital growth with expert analysis.</p>
+        
+        <!-- HOME PAGE -->
+        <div id="home-page" class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <div class="lg:col-span-8">
+                <header class="mb-10">
+                    <h1 class="text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">Intelligence for the Modern Era.</h1>
+                    <p class="text-gray-500 text-xl max-w-2xl">High-quality, long-form journalism focused on the intersection of finance, technology, and future trends.</p>
                 </header>
 
-                <!-- Article Card 1 -->
-                <article class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition cursor-pointer">
-                    <div class="h-48 bg-gray-200"></div>
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-blue-500 uppercase tracking-widest">Technology</span>
-                        <h2 class="text-2xl font-bold mt-2 mb-3">The Future of AI in 2026: What to Expect</h2>
-                        <p class="text-gray-600 mb-4 line-clamp-3">Artificial Intelligence is evolving faster than ever. In this comprehensive guide, we analyze the upcoming shifts in machine learning and how it affects global productivity...</p>
-                        <div class="flex items-center text-sm text-gray-500">
-                            <span>Jan 14, 2026</span>
-                            <span class="mx-2">•</span>
-                            <span>8 min read</span>
-                        </div>
-                    </div>
-                </article>
+                <!-- TOP AD UNIT -->
+                <div class="ad-container h-24 mb-10">
+                    <span>Top Leaderboard Ad Unit</span>
+                </div>
 
-                <!-- Article Card 2 -->
-                <article class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition cursor-pointer">
-                    <div class="h-48 bg-gray-300"></div>
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-green-500 uppercase tracking-widest">Finance</span>
-                        <h2 class="text-2xl font-bold mt-2 mb-3">Smart Investing Strategies for the Next Decade</h2>
-                        <p class="text-gray-600 mb-4 line-clamp-3">Building wealth requires patience and a solid strategy. We break down the most effective investment vehicles for long-term financial stability in a volatile market...</p>
-                        <div class="flex items-center text-sm text-gray-500">
-                            <span>Jan 12, 2026</span>
-                            <span class="mx-2">•</span>
+                <!-- MAIN ARTICLE FEED -->
+                <div class="space-y-12">
+                    <article class="group cursor-pointer">
+                        <div class="aspect-video w-full bg-gray-200 rounded-2xl mb-4 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Tech" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Technology</span>
+                        <h2 class="text-3xl font-bold mt-2 mb-3 group-hover:underline">Global Connectivity: The 2026 Telecommunications Report</h2>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-4">Deep dive into how satellite internet and 6G research are reshaping the way emerging markets participate in the global economy...</p>
+                        <div class="flex items-center text-sm font-medium text-gray-400">
+                            <span>Jan 14, 2026</span>
+                            <span class="mx-3">•</span>
+                            <span>15 min read</span>
+                        </div>
+                    </article>
+
+                    <!-- MID-FEED AD UNIT -->
+                    <div class="ad-container h-64">
+                        <span>In-Feed Responsive Ad Unit</span>
+                    </div>
+
+                    <article class="group cursor-pointer">
+                        <div class="aspect-video w-full bg-gray-200 rounded-2xl mb-4 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Finance" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <span class="text-emerald-600 font-bold text-xs uppercase tracking-widest">Economy</span>
+                        <h2 class="text-3xl font-bold mt-2 mb-3 group-hover:underline">Navigating High-Interest Environments</h2>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-4">The shift in central bank policies worldwide has created a new landscape for private equity and retail investors alike...</p>
+                        <div class="flex items-center text-sm font-medium text-gray-400">
+                            <span>Jan 10, 2026</span>
+                            <span class="mx-3">•</span>
                             <span>12 min read</span>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                </div>
             </div>
 
-            <!-- SIDEBAR: Required for Ad Placement & Authority -->
-            <aside class="space-y-8">
-                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-lg mb-4">About the Author</h3>
-                    <p class="text-gray-600 text-sm italic">Elite Insights is a dedicated platform providing high-quality, human-written content to help readers navigate the digital age.</p>
+            <!-- SIDEBAR -->
+            <aside class="lg:col-span-4 space-y-8">
+                <div class="bg-blue-50 p-8 rounded-3xl">
+                    <h3 class="font-bold text-xl mb-3 text-blue-900">Newsletter</h3>
+                    <p class="text-blue-800 text-sm mb-6">Join 50,000+ professionals receiving our weekly analysis.</p>
+                    <input type="email" placeholder="Email address" class="w-full p-3 rounded-xl border-none ring-1 ring-blue-200 mb-3 focus:ring-2 focus:ring-blue-500">
+                    <button class="w-full bg-blue-700 text-white font-bold py-3 rounded-xl hover:bg-blue-800">Subscribe</button>
                 </div>
 
-                <!-- AdSense Auto-Ad Mockup -->
-                <div class="ad-placeholder h-[250px] w-full">
-                    <span>Ads will appear here after approval</span>
+                <div class="ad-container h-[600px]">
+                    <span>Sticky Skyscraper Ad Unit</span>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-                    <h3 class="font-bold text-lg mb-4">Categories</h3>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li><a href="#" class="hover:text-blue-600">Digital Marketing</a></li>
-                        <li><a href="#" class="hover:text-blue-600">Wealth Management</a></li>
-                        <li><a href="#" class="hover:text-blue-600">Software Reviews</a></li>
-                        <li><a href="#" class="hover:text-blue-600">Health & Wellness</a></li>
-                    </ul>
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-4">Trending Topics</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs font-semibold text-gray-600">Blockchain</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs font-semibold text-gray-600">Sustainability</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs font-semibold text-gray-600">Venture Capital</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs font-semibold text-gray-600">AI Ethics</span>
+                    </div>
                 </div>
             </aside>
         </div>
 
         <!-- ABOUT PAGE -->
-        <div id="about-page" class="hidden max-w-3xl mx-auto py-12">
-            <h1 class="text-3xl font-bold mb-6">About Us</h1>
-            <div class="prose prose-blue text-gray-700 space-y-4">
-                <p>Welcome to Elite Insights. Founded in 2025, our mission is to provide accurate, well-researched, and valuable information to our global audience.</p>
-                <p>We pride ourselves on our editorial integrity. Every piece of content published on this site undergoes a rigorous fact-checking process to ensure we provide our readers with only the best insights into technology and finance.</p>
+        <div id="about-page" class="hidden max-w-3xl mx-auto py-16">
+            <h1 class="text-4xl font-black mb-8">About Elite Insights</h1>
+            <div class="prose text-gray-700 text-xl leading-relaxed">
+                <p>Elite Insights is an independent digital publication dedicated to clarity in a complex world. We believe that the best way to serve our readers is through rigorous research and uncompromising editorial standards.</p>
+                <p>Our team consists of industry veterans and data scientists who translate complicated global shifts into actionable knowledge.</p>
             </div>
         </div>
 
         <!-- CONTACT PAGE -->
-        <div id="contact-page" class="hidden max-w-xl mx-auto py-12 text-center">
-            <h1 class="text-3xl font-bold mb-6">Contact Us</h1>
-            <p class="text-gray-600 mb-8">Have a question or a feedback? We'd love to hear from you.</p>
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-left">
-                <div class="mb-4">
-                    <label class="block text-sm font-medium mb-1">Full Name</label>
-                    <input type="text" class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
+        <div id="contact-page" class="hidden max-w-xl mx-auto py-16">
+            <h1 class="text-4xl font-black mb-4 text-center">Get in Touch</h1>
+            <p class="text-gray-500 text-center mb-10">Inquiries regarding editorial, advertising, or general support.</p>
+            <div class="bg-white p-10 rounded-3xl shadow-xl shadow-blue-900/5 border border-gray-100">
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-400 mb-1">First Name</label>
+                        <input type="text" class="w-full p-3 bg-gray-50 rounded-xl border-none ring-1 ring-gray-200">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Last Name</label>
+                        <input type="text" class="w-full p-3 bg-gray-50 rounded-xl border-none ring-1 ring-gray-200">
+                    </div>
                 </div>
                 <div class="mb-4">
-                    <label class="block text-sm font-medium mb-1">Email Address</label>
-                    <input type="email" class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
+                    <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Email</label>
+                    <input type="email" class="w-full p-3 bg-gray-50 rounded-xl border-none ring-1 ring-gray-200">
                 </div>
                 <div class="mb-6">
-                    <label class="block text-sm font-medium mb-1">Message</label>
-                    <textarea class="w-full p-2 border rounded-md h-32 focus:ring-2 focus:ring-blue-500"></textarea>
+                    <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Message</label>
+                    <textarea class="w-full p-3 bg-gray-50 rounded-xl border-none ring-1 ring-gray-200 h-32"></textarea>
                 </div>
-                <button class="w-full bg-blue-600 text-white font-bold py-3 rounded-md hover:bg-blue-700 transition">Send Message</button>
+                <button class="w-full bg-gray-900 text-white font-bold py-4 rounded-xl hover:bg-black transition">Submit Inquiry</button>
             </div>
         </div>
 
-        <!-- PRIVACY POLICY (MOST IMPORTANT FOR ADSENSE) -->
-        <div id="privacy-page" class="hidden max-w-4xl mx-auto py-12">
-            <h1 class="text-3xl font-bold mb-6">Privacy Policy</h1>
-            <div class="prose text-gray-700 space-y-6">
-                <p>At Elite Insights, we prioritize your privacy. This policy outlines how we handle data and our use of cookies, especially concerning our partnership with Google AdSense.</p>
-                <h3 class="font-bold text-xl">Google AdSense and Cookies</h3>
-                <p>Google, as a third-party vendor, uses cookies to serve ads on our site. Google's use of the DART cookie enables it to serve ads to our users based on their visit to our site and other sites on the Internet.</p>
-                <h3 class="font-bold text-xl">Information We Collect</h3>
-                <p>We may collect personal information such as name and email address only when voluntarily submitted via our contact forms.</p>
-                <p>Last Updated: January 14, 2026</p>
+        <!-- PRIVACY POLICY -->
+        <div id="privacy-page" class="hidden max-w-4xl mx-auto py-16">
+            <h1 class="text-4xl font-black mb-8">Privacy & Cookie Policy</h1>
+            <div class="prose text-gray-700 space-y-6 bg-white p-10 rounded-3xl border border-gray-100">
+                <section>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">1. Data Collection</h2>
+                    <p>This website uses Google AdSense to display advertisements. Google uses cookies to serve ads based on a user's prior visits to your website or other websites.</p>
+                </section>
+                <section>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">2. Google Advertising Cookies</h2>
+                    <p>Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visit to our sites and/or other sites on the Internet. Users may opt out of personalized advertising by visiting Ads Settings.</p>
+                </section>
+                <section>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">3. Third-party Vendors</h2>
+                    <p>Third-party vendors and ad networks may also serve ads on this site. We provide links to their respective websites so you can opt out of their use of cookies for interest-based advertising if the vendor or ad network offers this option.</p>
+                </section>
+                <p class="text-sm text-gray-400 italic">Effective Date: January 14, 2026</p>
             </div>
         </div>
     </main>
 
-    <footer class="bg-gray-900 text-gray-400 py-12 mt-12">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="text-white font-bold text-lg mb-4">ELITE INSIGHTS</p>
-            <div class="flex justify-center space-x-6 mb-6 text-sm">
-                <a href="#" onclick="showPage('privacy')" class="hover:text-white">Privacy Policy</a>
-                <a href="#" onclick="showPage('contact')" class="hover:text-white">Contact Us</a>
-                <a href="#" class="hover:text-white">Terms of Service</a>
-                <a href="#" class="hover:text-white">Sitemap</a>
+    <!-- FOOTER -->
+    <footer class="bg-white border-t py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <span class="text-2xl font-black text-blue-700">ELITE INSIGHTS</span>
+                    <p class="mt-4 text-gray-500 max-w-xs leading-relaxed">The premier destination for analytical depth in an era of digital noise.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-4">Legal</h4>
+                    <ul class="text-gray-500 space-y-2 text-sm">
+                        <li><a href="#" onclick="showPage('privacy')" class="hover:text-blue-700">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-700">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-blue-700">Cookie Settings</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-4">Company</h4>
+                    <ul class="text-gray-500 space-y-2 text-sm">
+                        <li><a href="#" onclick="showPage('about')" class="hover:text-blue-700">About Us</a></li>
+                        <li><a href="#" onclick="showPage('contact')" class="hover:text-blue-700">Contact</a></li>
+                        <li><a href="#" class="hover:text-blue-700">Partnerships</a></li>
+                    </ul>
+                </div>
             </div>
-            <p class="text-xs">&copy; 2026 Elite Insights. All Rights Reserved. No content may be reproduced without permission.</p>
+            <div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+                <p>&copy; 2026 Elite Insights Global. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <span>Twitter</span>
+                    <span>LinkedIn</span>
+                    <span>RSS Feed</span>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -162,7 +230,7 @@
                 document.getElementById(p).classList.add('hidden');
             });
             document.getElementById(pageId + '-page').classList.remove('hidden');
-            window.scrollTo(0,0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 </body>
